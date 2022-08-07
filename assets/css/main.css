@@ -1783,12 +1783,12 @@ input, select, textarea {
 		}
 
 			header.major > :first-child:after {
-				content: '';
+				/* content: '';
 				background-color: #ffffff;
 				display: block;
 				height: 2px;
 				margin: 0.325em 0 0.5em 0;
-				width: 100%;
+				width: 100%; */
 			}
 
 		header.major > p {

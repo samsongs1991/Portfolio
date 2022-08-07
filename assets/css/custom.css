@@ -1,0 +1,25 @@
+#banner img {
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.8;
+    border-radius: 50%;
+    right: 0px;
+    top: -160px;
+    z-index: -1;
+}
+
+@media (max-width: 736px) {
+    #banner img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0.8;
+        border-radius: 50%;
+        right: 0px;
+        top: -42px;
+        z-index: -1;
+    }
+}
