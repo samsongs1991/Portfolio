@@ -40,4 +40,9 @@
 
 #technologies-list > div > i {
     font-size: 100px;
+    transition: text-shadow 0.5s ease-in-out;
+}
+
+#home-skills:hover i {
+    text-shadow: 0px 0px 8px rgb(0, 242, 255);
 }
