@@ -13,6 +13,12 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+			emailjs.init("irgcPnZSpqG-EH_h-");
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -173,15 +179,15 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form id="contact-form">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<label for="from_name">Name</label>
+											<input type="text" name="from_name" id="from_name" />
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<label for="from_email">Email</label>
+											<input type="text" name="from_email" id="from_email" />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
@@ -189,8 +195,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
+										<li><input id="contact-submit" type="submit" value="Send Message" class="primary" /></li>
+										<li><input id="contact-clear" type="reset" value="Clear" /></li>
 									</ul>
 								</form>
 							</section>
@@ -250,6 +256,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/custom.js"></script>
 	</body>
 </html>
