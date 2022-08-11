@@ -46,3 +46,30 @@
 #home-skills:hover i {
     text-shadow: 0px 0px 8px rgb(0, 242, 255);
 }
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel img {
+    transition: opacity 2s ease-in-out;
+}
+
+.carousel .image.main {
+    margin: 0px;
+}
+
+.carousel .hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.carousel .show {
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

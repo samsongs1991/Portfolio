@@ -57,3 +57,31 @@ const setupEmail = () => {
 };
 
 setupEmail();
+
+const setupCarousel = () => {
+    const carousel = document.querySelector(".carousel");
+    if(carousel) {
+        const carouselImgs = carousel.children;
+        // const baseImg = carouselImgs[0];
+        const rotatingImgs = [];
+        for(let i = 1; i < carouselImgs.length; i++) {
+            rotatingImgs.push(carouselImgs[i]);
+        }
+
+        let current = 0;
+        setInterval(() => {
+            if(current < rotatingImgs.length) {
+                rotatingImgs[current].classList.replace("hidden", "show");
+                current++;
+                setTimeout(() => {
+                    rotatingImgs[current - 2].classList.replace("show", "hidden");
+                }, 1000);
+            } else {
+                rotatingImgs[current - 1].classList.replace("show", "hidden");
+                current = 0;
+            }
+        }, 4000);
+    }
+};
+
+setupCarousel();
