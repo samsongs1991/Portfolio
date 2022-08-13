@@ -67,23 +67,30 @@
 										In PokeViser users can search through 898 Pokemon and select six at a time to learn about.
 										Users can easily search using the search bar and apply filters to hone in on the Pokemon they are looking for.
 										Once a selection is made users can view sprite images, base stats, info text, typings, damage relations and relative heights of their selected Pokemon.
-										For a fun surprise Pokemon parade click on the "About" page.
+										For a surprise Pokemon parade click on the "About" page.
 									</p>
 									<p>
-										I built PokeViser as a Vanilla JS single-page web application.
+										I built PokeViser with Vanilla JS to be a single-page web application.
 										For the data I used PokeAPI and for the stat charts I used ChartJS.
 										To help manage the project files I used NPM and Webpack.
 									</p>
 									<p>
-
+										The most significant challenge to building PokeViser was how to make the experience fast and seamless.
+										There are 898 Pokemon and the PokeAPI only allows requests for one Pokemon at a time.
+										This makes loading the data for users to view extremely slow.
+										Originally I started by making fetch requests only for Pokemon that users selected and storing them on the frontend so that if the user selected the same Pokemon again the browser would not have to make that request.
+										However, the requests were still noticeably slow and the images took especially long to load because the image had to wait for the fetch to the PokeAPI before making another request for the image.
+										The solution I came upon was to prefetch all the data I needed and store it in a JS file.
+										Instead of a fetch being made to the PokeAPI server as the user selects Pokemon, all of the Pokemon are already loaded so the user gets the information they are looking for immediately.
 									</p>
 									<ol>
 										<label>Future additions</label>
+										<li>Update the UI for improved responsive design</li>
 										<li>Language options</li>
-										<li>More filter options</li>
-										<li>Updated UI with a modern style</li>
-										<li>Options for images like shiny sprites, rearview sprites and higher definition images by an artist</li>
 										<li>Additional page to view evolution lines</li>
+										<li>Update the UI to look more like a modern website</li>
+										<li>Additional filter options</li>
+										<li>Options for images like shiny sprites, rearview sprites, regional variants, and higher definition images by artists</li>
 									</ol>
 									<a href="index.html#one" class="button primary">See more projects</a>
 								</div>
