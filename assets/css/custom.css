@@ -77,3 +77,16 @@
 .carousel ~ p {
     margin-top: 2.5em;
 }
+
+#aboutme {
+    font-weight: bold;
+    border-radius: 20px;
+    word-wrap: break-word;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}

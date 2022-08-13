@@ -85,3 +85,47 @@ const setupCarousel = () => {
 };
 
 setupCarousel();
+
+const setupAboutMe = () => {
+    const div = document.getElementById("aboutme");
+    if(!div) { return }
+
+    const languages = {
+        english: {
+            text: "I have experience with React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB and more. I love exploring new and interesting ways of bringing my ideas to life! When I'm not coding I enjoy making my own hot sauce, biking cross-country and learning Spanish.",
+            btnText: "IN SPANISH"
+        },
+        spanish: {
+            text: "Tengo experiencia con React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB y más. Me encanta a realizar mis ideas por varios modos para que aprenda más! Cuando no estoy programando en computadoras me gustan hacer mi propia salsa picante, montar mi bicicleta y aprender español. Y le aseguro que no utilicé un traductor jaja.",
+            btnText: "IN ENGLISH"
+        }
+    }
+
+    const translate = language => {
+        const text = languages[language].text;
+        const btnText = languages[language].btnText;
+        div.innerHTML = "";
+
+        let i = 0;
+        const interval = setInterval(() => {
+            div.innerHTML += text[i];
+            i++;
+            if(i === text.length) {
+                div.innerText += "\n";
+                const btn = document.createElement("button");
+                btn.classList.add("button", "primary", "small");
+                btn.addEventListener("click", () => {
+                    language === "english" ? translate("spanish") : translate("english");
+                });
+                btn.innerText = btnText;
+                div.append(btn);
+                clearInterval(interval);
+            }
+        }, 25);
+    }
+
+    translate("english");
+
+};
+
+setupAboutMe();
