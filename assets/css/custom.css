@@ -85,8 +85,23 @@
     position: absolute;
     width: 100%;
     font-family: monospace;
-
     border: none;
     padding: 0px;
     margin: 0px;
+    /* visibility: hidden; */
+}
+
+#aboutme-ghost {
+    font-weight: bold;
+    border-radius: 20px;
+    word-wrap: break-word;
+    position: relative;
+    width: 100%;
+    font-family: monospace;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+
+    visibility: hidden;
+    z-index: -1;
 }

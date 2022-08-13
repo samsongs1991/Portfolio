@@ -101,9 +101,19 @@ const setupAboutMe = () => {
         }
     }
 
+    const ghost = document.getElementById("aboutme-ghost");
+
     const translate = language => {
         const text = languages[language].text;
         const btnText = languages[language].btnText;
+
+        const btn = document.createElement("button");
+        btn.classList.add("button", "primary", "small");
+        btn.addEventListener("click", () => {
+            language === "english" ? translate("spanish") : translate("english");
+        });
+        btn.innerText = btnText;
+
         div.innerHTML = "";
 
         let i = 0;
@@ -112,12 +122,6 @@ const setupAboutMe = () => {
             i++;
             if(i === text.length) {
                 div.innerText += "\n";
-                const btn = document.createElement("button");
-                btn.classList.add("button", "primary", "small");
-                btn.addEventListener("click", () => {
-                    language === "english" ? translate("spanish") : translate("english");
-                });
-                btn.innerText = btnText;
                 div.append(btn);
                 clearInterval(interval);
             }
