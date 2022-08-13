@@ -92,11 +92,11 @@ const setupAboutMe = () => {
 
     const languages = {
         english: {
-            text: "I have experience with React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB and more. I love exploring new and interesting ways of bringing my ideas to life! When I'm not coding I enjoy making my own hot sauce, biking cross-country and learning Spanish.",
+            text: "Hi, my name is Sam Song! Welcome to my portfolio site! I have experience with React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB and more. I love exploring new and interesting ways of bringing my ideas to life. When I'm not coding I enjoy making my own hot sauce, biking cross-country and learning Spanish.",
             btnText: "IN SPANISH"
         },
         spanish: {
-            text: "Tengo experiencia con React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB y más. Me encanta a realizar mis ideas por varios modos para que aprenda más! Cuando no estoy programando en computadoras me gustan hacer mi propia salsa picante, montar mi bicicleta y aprender español. Y le aseguro que no utilicé un traductor jaja.",
+            text: "Hola, me llamo Samuel! Bienvenidos a mi sitio! Tengo experiencia con React, Redux, Express, Ruby on Rails, PostgresQL, MongoDB y más. Me encanta a realizar mis ideas por varios modos para que aprenda más. Cuando no estoy programando en computadoras me gustan hacer mi propia salsa picante, montar mi bicicleta y aprender español. Y le aseguro que no utilicé un traductor jaja.",
             btnText: "IN ENGLISH"
         }
     }
